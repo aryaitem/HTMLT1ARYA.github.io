@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pemrograman web</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Style untuk tampilan halaman */
         body {
@@ -43,6 +44,61 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Gallery Styles */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Article Styles */
+        .blog-article {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            display: flex; /* Mengubah kontainer menjadi flex */
+            align-items: center; /* Menyusun item secara vertikal */
+        }
+
+        .blog-article img {
+            width: 50%; /* Ukuran gambar */
+            height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+            border-radius: 8px; /* Untuk sudut bulat */
+            float: left; /* Mengatur gambar ke kiri */
+            margin-right: 20px; /* Jarak antara gambar dan teks */
+        }
+
+        .blog-article .overlay {
+            width: 50%; /* Ukuran teks */
+            padding: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Efek hover untuk blok anime */
+        .blog-article:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-article:hover .overlay {
+            transform: translateY(0);
+        }
+
+        
     </style>
 </head>
 <body>
@@ -63,20 +119,35 @@
     <p>Nama : arya item.</p>
     <p>Nim : 220211060258</p>
     <P>Dalam pembahasan ini, kita akan menjelajahi dunia yang luas dan menarik dari anime yang telah memikat hati jutaan penggemar di seluruh dunia, yaitu "Naruto", "Hunter x Hunter", dan "One Piece". Ketiga anime ini telah menempatkan diri mereka di posisi yang istimewa dalam dunia hiburan, dengan cerita-cerita yang mendalam, karakter-karakter yang ikonik, dan pesan-pesan yang menyentuh.
-
         Melalui perjalanan dan petualangan yang menarik, ketiganya menyampaikan pesan-pesan tentang persahabatan, keberanian, perjuangan, dan impian. Kami akan menjelajahi latar belakang masing-masing anime, membahas karakter-karakter kunci, mengulas momen-momen epik, serta merangkum pesan-pesan yang dapat kita ambil dari setiap cerita.</P>
 </section>
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
+<div class="gallery">
+    <div class="blog-article">
         <img src="gon.jpg" alt="HUNTER X HUNTER gon">
-        <img src="kilua.jpg" alt="HUNTER X HUNTER kilua">
+        <div class="overlay">
+            <b>HUNTER X HUNTER GON</b>
+            <p>Gon Freecss, protagonis "Hunter x Hunter", adalah seorang anak yang bersemangat untuk menjadi Hunter seperti ayahnya.</p>
+        </div>
     </div>
-    <p>HUNTER X HUNTER GON DAN KILLUA.</p>
-</section>
+    <div class="blog-article">
+        <img src="kilua.jpg" alt="HUNTER X HUNTER kilua">
+        <div class="overlay">
+            <b>HUNTER X HUNTER KILUA</b>
+            <p>Kilua adalah karakter "Hunter x Hunter", seorang pemburu dan assassin berbakat dengan hati yang lembut.Kilua adalah karakter "Hunter x Hunter", seorang pemburu dan assassin berbakat dengan hati yang lembut.</p>
+        </div>
+    </div>
+    <div class="blog-article">
+        <img src="akame.jpg" alt="Akame ga Kill">
+        <div class="overlay">
+            <b>AKAME GA KILL</b>
+            <p>Akame adalah anggota Night Raid dalam "Akame ga Kill", seorang pembunuh terampil dengan pedang dan prinsip keadilan yang kuat.</p>
+        </div>
+    </div>
+</div>
 
 <section id="blog">
+    
     <h2>Blog ANIME</h2>
     <article>
         <h3> HUNTER X HUNTER</h3>
