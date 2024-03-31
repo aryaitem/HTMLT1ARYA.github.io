@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery .blog-article {
+    width: calc(33.33% - 20px); /* Mengatur lebar setiap blog-article */
+    margin-bottom: 20px; /* Menambahkan jarak bawah antara setiap blog-article */
+}
+
+.gallery img {
+    width: 100%; /* Set lebar gambar menjadi 100% */
+    height: auto; /* Tinggi otomatis untuk menjaga aspek rasio */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Blog Article Styles */
+.blog-article {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.blog-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.blog-article .overlay {
+    width: 50%;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Hover Effect for Anime Blocks */
+.blog-article:hover {
+    transform: translateY(-5px);
+}
+
+.blog-article:hover .overlay {
+    transform: translateY(0);
+}
+
